@@ -1,16 +1,30 @@
 # Tecniche di collaborazione tra thread
+
+---
+@snap[noth-west]
+Come facciamo a far si che due thread collaborino? Ad esempio un thread, Thread A, produce qualcosa di cui il Thread B, un altro thread 
+ha bisogno. Il Thread A è il produttore e il Thread B è il consumatore. I due thread si devono coordinare: il consumatore deve aspettare che il produttore 
+abbia prodotto.
+@snapend
 ---
 @snap[north-west]
-L'array è una struttura dati che in fase di instanziazione viene stabilito in numero di elementi di cui è composta.
+Il Thread B, consumatore e Thread B, produttore:
 @snapend
 
 ```java
-byte octet_buffer[] = new byte[1024];
-Button buttons[] = new Button[10];
+// Thread B
+if ( resultIsAvailable() == false )
+    obj.wait(); // wait for notification that the result is available
+useTheResult();
 ```
-@snap[south-west]
-Abbiamo creato due array, `octet_buffer` e `buttons`, rispettivamente di `1024` *bytes* e `10` oggetti di tipo *Button*.
-@snapend 
+
+```
+// Thread A
+generateTheResult();
+obj.notify(); // send out a notification that the result is available
+```
+
+
 ---
 @snap[north-west]
 ### Array di tipo primitivo - esempio
