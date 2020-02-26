@@ -23,7 +23,13 @@ generateTheResult();
 obj.notify(); // send out a notification that the result is available
 ```
 
-Ora c'è qualche subdola race condition in questo codice. I due thread potrebbero eseguire il loro codice nel seguente ordine:
+Ora c'è qualche subdola race condition in questo codice. 
+@snapend
+
+---
+
+@snap[north-west]
+I due thread potrebbero eseguire il loro codice nel seguente ordine:
 @ol
 - Il Thread A controlla resultIsAvailable() è trova che il risultato non è disponibile, così decide di invocare obj.wait(), ma prima che lo faccia,
 - Il Thread B termina di generare il risultato e invoca obj.notify()
