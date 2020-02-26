@@ -7,9 +7,8 @@ ha bisogno. Il Thread A è il produttore e il Thread B è il consumatore. I due 
 abbia prodotto.
 @snapend
 ---
-@snap[west]
-Il Thread B, consumatore e Thread B, produttore, eseguono questo codice, dove `obj` è qualche oggetto:
-@snapend
+@snap[north-west]
+Il Thread B, consumatore e Thread B, produttore, eseguono questo codice, dove `obj è qualche oggetto:
 
 ```java
 // Thread B
@@ -24,6 +23,7 @@ generateTheResult();
 obj.notify(); // send out a notification that the result is available
 ```
 
+@snapend
 
 ---
 @snap[north-west]
