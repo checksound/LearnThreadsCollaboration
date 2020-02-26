@@ -7,7 +7,7 @@ ha bisogno. Il Thread A è il produttore e il Thread B è il consumatore. I due 
 abbia prodotto.
 @snapend
 ---
-@snap[north-west]
+@snap[west]
 Il Thread B, consumatore e Thread B, produttore, eseguono questo codice, dove `obj` è qualche oggetto:
 @snapend
 
