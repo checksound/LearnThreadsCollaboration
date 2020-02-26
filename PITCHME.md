@@ -29,6 +29,19 @@ Ora c'è qualche subdola race condition in questo codice.
 ---
 
 @snap[north-west]
+```java
+// Thread B
+if ( resultIsAvailable() == false )
+    obj.wait(); // wait for notification that the result is available
+useTheResult();
+```
+
+```
+// Thread A
+generateTheResult();
+obj.notify(); // send out a notification that the result is available
+```
+
 I due thread potrebbero eseguire il loro codice nel seguente ordine:
 @ol
 - Il Thread A controlla resultIsAvailable() è trova che il risultato non è disponibile, così decide di invocare obj.wait(), ma prima che lo faccia,
