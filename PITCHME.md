@@ -141,7 +141,7 @@ un produttore non inserisce un elemento e notifica l'inserimento: per questo mot
 
 ---
 
-@snap[north-west text-08]
+@snap[north-west]
 ```java
 import java.util.LinkedList;
 
