@@ -138,7 +138,7 @@ un produttore non inserisce un elemento e notifica l'inserimento: per questo mot
 @snapend
 
 @snap[south]
-![](assets/img/Produttore_consumatore_connection_pool.PNG)
+![width=500](assets/img/Produttore_consumatore_connection_pool.PNG)
 @snapend
 
 
