@@ -68,7 +68,7 @@ e quindi deve essere invocata nello statement di  try che cattura quella eccezio
 @snapend
 ---
 
-@snap[north-west  text-07]
+@snap[north-west  text-09]
 ### Produttore/consumatore semplificato (un solo elemento)
 Facciamo ad esempio il caso di un risultato calcolato da un thread che deve essere reso disponibile ad un altro thread. 
 Assumendo che c'è una variabile condivisa **sharedResult** che è utilizzata per trasferire il risultato dal produttore al consumatore. 
