@@ -139,10 +139,9 @@ un produttore non inserisce un elemento e notifica l'inserimento: per questo mot
 ![width=700](assets/img/Produttore_consumatore_connection_pool.PNG)
 @snapend
 
-
-
 ---
 
+@snap[north-west text-08]
 ```java
 import java.util.LinkedList;
 
@@ -172,6 +171,8 @@ public class MyLinkedBlockingQueue<E> {
 }
 
 ```
+@snapend
+
 ---
 @snap[north-west]
 ### Array di tipo primitivo - esempio
