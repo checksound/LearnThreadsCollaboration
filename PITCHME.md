@@ -134,11 +134,12 @@ La struttura dati che implementa questa problematica di produttore e consumatore
 ### Blocking queue
 Questa lista deve essere sincronizzata per evitare race condition ma in più deve far si che se la lista è vuota 
 e un consumatore cerca di prelevare un elemento dalla lista, il consumatore sia messo in wait (bloccato) fino a che 
-un produttore non inserisce un elemento e notifica l'inserimento:<br><br> per questo motivo, questa struttura, si chiama blocking queue.
-
-![](./assets/img/Produttore_consumatore_connection_pool.png)
+un produttore non inserisce un elemento e notifica l'inserimento:<br>
+per questo motivo, questa struttura, si chiama **blocking queue**.
 
 @snapend
+
+![](./assets/img/Produttore_consumatore_connection_pool.png)
 
 ---
 
