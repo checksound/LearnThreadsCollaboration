@@ -59,7 +59,7 @@ Questo è un tipo di deadlock che lascia il *Thread A* aspettare per sempre.
 ---
 @snap[north-west text-07]
 Quindi ci vuole qualche tipo di sincronizzazione. La soluzione è includere sia il codice di *Thread A* che di *Thread B* nello statement **synchronized**, ed è molto naturale sincronizzare sullo stesso oggetto, obj, che è utilizzato per le chiamate di **wait()** e **notify()**. 
-<br><br>In effetti siccome la sincronizzazione sarebbe quasi sempre obbligatoria quando  si utilizzano wait() e notify(), **Java lo rende un requisito obbligatorio**. 
+<br><br>In effetti, siccome la sincronizzazione sarebbe quasi sempre obbligatoria quando  si utilizzano wait() e notify(), **Java lo rende un requisito obbligatorio**. 
 <br><br>
 In Java, un thread può legalmente invocare **obj.wait()** e **obj.notify()** solo se il thread ha acquisito il lock di sincronizzazione associato all'oggetto **obj**. 
 <br><br>Se non ha acquisito prima il lock, allora viene lanciata un'eccezione. (L'eccezione è di tipo *java.lang.IllegalMonitorStateException*, che è di tipo runtime 
@@ -67,6 +67,12 @@ e quindi non deve essere gestita obbligatoriamente). Una ulteriore complicazione
 e quindi deve essere invocata nello statement di  try che cattura quella eccezione.
 @snapend
 ---
+
+@snap[north-west text-07]
+### Produttore/consumatore
+Facciamo ad esempio il caso di un risultato calcolato da un thread che deve essere reso disponibile ad un altro thread. Questa è una versione semplificata del problema produttore/consumatore in cui un solo elemento è prodotto e consumato. Assumendo che c'è una variabile condivisa sharedResult che è utilizzata per trasferire il risultato dal produttore al consumatore. Quando il risultato è pronto, il produttore setta il valore della variabile a un valore non nullo. Il consumatore può controllare se il risultato è pronto controllando se il valore della variabile sharedResult è nullo. Utilizziamo la variabile lock per sincronizzare.
+@snapend
+------
 @snap[north-west]
 ### Array di tipo primitivo - esempio
 @snapend
