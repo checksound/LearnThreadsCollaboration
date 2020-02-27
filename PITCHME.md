@@ -4,8 +4,8 @@
 
 @snap[north-west]
 ### Produttore/Consumatore
-Come facciamo a far si che due thread collaborino? <br>Ad esempio un thread, *Thread A*, produce qualcosa di cui il *Thread B*, ha bisogno. 
-Il *Thread A* è il produttore e il *Thread B* è il consumatore. <br> I due thread si devono coordinare: il consumatore deve aspettare che il produttore 
+Come facciamo a far si che due thread collaborino? <br>Ad esempio un thread, *Thread A*, produce qualcosa di cui il *Thread B* ha bisogno.<br><br> 
+Il *Thread A* è il produttore e il *Thread B* è il consumatore. <br><br> I due thread si devono coordinare: il consumatore deve aspettare che il produttore 
 abbia prodotto, prima di poter prelevare l'elemento.
 @snapend
 ---
