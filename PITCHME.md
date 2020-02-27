@@ -1,8 +1,9 @@
 # Tecniche di collaborazione tra thread
 
 ---
-### Produttore/Consumatore
+
 @snap[north-west]
+### Produttore/Consumatore
 Come facciamo a far si che due thread collaborino? Ad esempio un thread, *Thread A*, produce qualcosa di cui il *Thread B*, un altro thread 
 ha bisogno. Il *Thread A* è il produttore e il *Thread B* è il consumatore. I due thread si devono coordinare: il consumatore deve aspettare che il produttore 
 abbia prodotto, prima di prelevare l'elemento.
