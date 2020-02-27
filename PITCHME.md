@@ -129,6 +129,14 @@ La struttura dati che implementa questa problematica di produttore e consumatore
 
 @snapend
 ---
+@snap[north-west]
+### Blocking queue
+
+
+
+@snapend
+
+---
 
 ```java
 import java.util.LinkedList;
