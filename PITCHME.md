@@ -142,6 +142,7 @@ un produttore non inserisce un elemento e notifica l'inserimento: per questo mot
 ---
 
 ---?gist=MassimoCappellano/34a86252db41dc4d28d4b21424246ea7&lang=Java&title=Dynamic Array of ints
+@[1-9](attributi private `items` e `itemCt`)
 
 ---
 
