@@ -150,13 +150,13 @@ un produttore non inserisce un elemento e notifica l'inserimento: per questo mot
 @snap[north-west text-07]
 ### Il metodo notifyAll()
 E' possibile che diversi thread siano in attesa di notifiche. 
-Una chiamata a obj.notify() risveglia solo un thread che era in waiting su obj. 
-Se si vuole risvegliare tutti i thread che erano in waiting su obj, bisogna invocare obj.notifyAll(). 
+Una chiamata a **obj.notify()** risveglia solo un thread che era in waiting su obj. 
+Se si vuole risvegliare tutti i thread che erano in waiting su *obj*, bisogna invocare **obj.notifyAll()**. 
 obj.notify() funziona nell'esempio sopra perché solo i thread consumatori potevano essere bloccati. 
-Abbiamo bisogno che anche un solo thread dei consumatori sia risvegliato e non importa quale consumatore prenda l'elemento.<br> 
-Consideriamo invece una blocking queue di capacità massima limitata, dove sia il consumatore che il produttore possono essere bloccati. 
+Abbiamo bisogno che anche un solo thread dei consumatori sia risvegliato e non importa quale consumatore prenda l'elemento.<br><br> 
+Consideriamo invece una blocking queue di **capacità massima limitata**, dove sia il consumatore che il produttore possono essere bloccati. 
 Quando un elemento è aggiunto a una coda, noi vogliamo che il thread consumatore è  notificato, non invece magari un altro produttore. 
-Una soluzione è chiamare la notifyAll() invece della notify(), che notificherà a tutti i thread, inclusi i consumatori che aspettano in waiting.
+Una soluzione è chiamare la **notifyAll()** invece della notify(), che notificherà a tutti i thread, inclusi i consumatori che aspettano in waiting.
 @snapend
 
 ---
