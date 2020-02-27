@@ -2,9 +2,9 @@
 
 ---
 @snap[noth-west]
-Come facciamo a far si che due thread collaborino? Ad esempio un thread, Thread A, produce qualcosa di cui il Thread B, un altro thread 
-ha bisogno. Il Thread A è il produttore e il Thread B è il consumatore. I due thread si devono coordinare: il consumatore deve aspettare che il produttore 
-abbia prodotto.
+Come facciamo a far si che due thread collaborino? Ad esempio un thread, *Thread A*, produce qualcosa di cui il *Thread B*, un altro thread 
+ha bisogno. Il *Thread A* è il produttore e il *Thread B* è il consumatore. I due thread si devono coordinare: il consumatore deve aspettare che il produttore 
+abbia prodotto, prima di prelevare l'elemento.
 @snapend
 ---
 @snap[west]
@@ -51,10 +51,15 @@ I due thread potrebbero eseguire il loro codice nel seguente ordine:
 1. Il *Thread A* chiama **obj.wait()** per aspettare la notifica che il risultato è disponibile. @note[note 3]
 @olend
 
-Nello Step 3, il Thread A sta aspettando per una notifica che non arriverà mai, perché **notify()** è già stata invocata nello Step 2. Questo è un tipo di deadlock che lascia il *Thread A* aspettare per sempre.
+Nello Step 3, il *Thread A* sta aspettando per una notifica che non arriverà mai, perché **notify()** è già stata invocata nello Step 2. 
+Questo è un tipo di deadlock che lascia il *Thread A* aspettare per sempre.
 
 @snapend
 
+---
+@snap[text-07]
+Quindi ci vuole qualche tipo di sincronizzazione. La soluzione è includere sia il codice di Thread A che di Thread B nello statement synchronized, ed è molto naturale sincronizzare sullo stesso oggetto, obj, che è utilizzato per le chiamate di wait() e notify(). In effetti siccome la sincronizzazione sarebbe quasi sempre obbligatoria quando  si utilizzano wait() e notify(), Java lo rende un requisito obbligatorio. In Java, un thread può legalmente invocare obj.wait() e obj.notify() solo se il thread ha acquisito il lock di sincronizzazione associato all'oggetto obj. Se non ha acquisito prima il lock, allora viene lanciata un'eccezione. (L'eccezione è di tipo java.lang.IllegalMonitorStateException, che è di tipo runtime e quindi non deve essere gestita obbligatoriamente). Una ulteriore complicazione è che il metodo wait() può lanciare l'eccezione java.lang.InterruptedException e quindi deve essere invocata nello statement di  try che cattura quella eccezione.
+@snapend
 ---
 @snap[north-west]
 ### Array di tipo primitivo - esempio
