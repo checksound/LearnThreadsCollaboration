@@ -132,7 +132,9 @@ La struttura dati che implementa questa problematica di produttore e consumatore
 @snap[north-west]
 ### Blocking queue
 
-
+@snap[north-west text-08]
+Questa lista deve essere sincronizzata per evitare race condition ma in più deve far si che se la lista è vuota e un consumatore cerca di prelevare un elemento dalla lista, il consumatore sia messo in wait (bloccato) fino a che un produttore non inserisce un elemento e notifica: per questo questa struttura si chiama blocking queue.
+@snapend
 
 @snapend
 
