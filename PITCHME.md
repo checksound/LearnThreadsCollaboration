@@ -119,6 +119,16 @@ Dopo che il secondo thread (il produttore) esce dal blocco sincronizzato, il loc
 
 ---
 
+@snap[north-west text-08]
+In un problema produttore/consumatore completo, molti risultati sono prodotti da uno o più produttori e sono consumati da uno o più consumatori. 
+
+Invece di avere un unico sharedResult, abbiamo una lista di oggetti che sono stati prodotti e non ancora consumati.
+
+La struttura dati che implementa questa problematica di produttore e consumatore è quella di una lista in cui i produttori mettono gli elementi prodotti e i consumatori prendono gli elementi da consumare.
+
+@snapend
+---
+
 ```java
 import java.util.LinkedList;
 
@@ -146,8 +156,6 @@ public class MyLinkedBlockingQueue<E> {
 		}
 	}
 }
-
-
 
 ```
 ---
