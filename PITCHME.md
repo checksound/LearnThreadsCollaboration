@@ -103,14 +103,16 @@ synchronized(lock) {
 useTheResult(useResult); // Not synchronized!
 ```
 @snapend
+
 ---
+
 @snap[north-west text-09]
-Da notare una cosa: lock.wait() non finisce finché lock.notify() non è invocato, 
-ma siccome entrambi i metodi sono chiamati all'interno di blocchi synchronized che sincronizzano sullo stesso oggetto, 
+Da notare una cosa: **lock.wait()** non finisce finché **lock.notify()** non è invocato, 
+ma siccome entrambi i metodi sono chiamati all'interno di blocchi synchronized che si sincronizzano sullo stesso oggetto, 
 non dovrebbe essere impossibile per entrambi i metodi essere eseguiti contemporaneamente? 
-Infatti, lock.wait() è un caso speciale: quando un thread chiama lock.wait(), esso cede il lock che teneva sull'oggetto sincronizzato. 
-Questo da a un altro thread la possibilità di eseguire il blocco synchronized(lock) che contiene lo statement lock.notify().  
-Dopo che il secondo thread esce dal blocco, il lock è ritornato al thread consumer così che possa continuare.
+Infatti, **lock.wait()** è un caso speciale: quando un thread chiama **lock.wait()**, esso cede il lock che teneva sull'oggetto sincronizzato. 
+Questo dà a un altro thread la possibilità di eseguire il blocco **synchronized(lock)** che contiene lo statement **lock.notify()**.  
+Dopo che il secondo thread (il produttore) esce dal blocco sincronizzato, il lock è ritornato al thread consumer così che possa continuare.
 @snapend
 
 ---
