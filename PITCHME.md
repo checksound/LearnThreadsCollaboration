@@ -72,7 +72,9 @@ e quindi deve essere invocata nello statement di  try che cattura quella eccezio
 ### Produttore/consumatore
 Facciamo ad esempio il caso di un risultato calcolato da un thread che deve essere reso disponibile ad un altro thread. Questa è una versione semplificata del problema produttore/consumatore in cui un solo elemento è prodotto e consumato. Assumendo che c'è una variabile condivisa sharedResult che è utilizzata per trasferire il risultato dal produttore al consumatore. Quando il risultato è pronto, il produttore setta il valore della variabile a un valore non nullo. Il consumatore può controllare se il risultato è pronto controllando se il valore della variabile sharedResult è nullo. Utilizziamo la variabile lock per sincronizzare.
 @snapend
-------
+
+---
+
 @snap[north-west]
 ### Array di tipo primitivo - esempio
 @snapend
