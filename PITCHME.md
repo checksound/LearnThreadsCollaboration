@@ -57,7 +57,7 @@ Questo è un tipo di deadlock che lascia il *Thread A* aspettare per sempre.
 @snapend
 
 ---
-@snap[text-07]
+@snap[north-west text-07]
 Quindi ci vuole qualche tipo di sincronizzazione. La soluzione è includere sia il codice di *Thread A* che di *Thread B* nello statement synchronized, ed è molto naturale sincronizzare sullo stesso oggetto, obj, che è utilizzato per le chiamate di **wait()** e **notify()**. 
 In effetti siccome la sincronizzazione sarebbe quasi sempre obbligatoria quando  si utilizzano wait() e notify(), **Java lo rende un requisito obbligatorio**. 
 <br>
