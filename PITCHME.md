@@ -136,7 +136,7 @@ Questa lista deve essere sincronizzata per evitare race condition ma in più dev
 e un consumatore cerca di prelevare un elemento dalla lista, il consumatore sia messo in wait (bloccato) fino a che 
 un produttore non inserisce un elemento e notifica l'inserimento:<br><br> per questo motivo, questa struttura, si chiama blocking queue.
 
-![](assets/img/Produttore_consumatore_connection_pool.png)
+![Tets](assets/img/Produttore_consumatore_connection_pool.png)
 
 @snapend
 
