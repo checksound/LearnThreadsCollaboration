@@ -28,7 +28,7 @@ Ora c'è qualche subdola race condition in questo codice.
 
 ---
 
-@snap[north-west]
+@snap[north span-100]
 ```java
 // Thread B
 if ( resultIsAvailable() == false )
