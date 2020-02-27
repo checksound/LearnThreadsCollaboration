@@ -8,7 +8,7 @@ abbia prodotto.
 @snapend
 ---
 @snap[west]
-Il Thread B, consumatore e Thread B, produttore, eseguono questo codice, dove `obj` è qualche oggetto:
+Il *Thread B*, consumatore e *Thread A*, produttore, eseguono questo codice, dove *obj* è qualche oggetto:
 
 ```java
 // Thread B
