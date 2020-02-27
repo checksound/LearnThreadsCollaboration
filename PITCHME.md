@@ -119,7 +119,7 @@ Dopo che il secondo thread (il produttore) esce dal blocco sincronizzato, il loc
 
 ---
 
-@snap[north-west]
+@snap[north-west text-08]
 ### Produttore/consumatore
 In un problema produttore/consumatore completo, molti risultati sono prodotti da uno o più produttori e sono consumati da uno o più consumatori. 
 
