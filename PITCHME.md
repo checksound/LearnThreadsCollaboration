@@ -119,7 +119,7 @@ Dopo che il secondo thread (il produttore) esce dal blocco sincronizzato, il loc
 
 ---
 
-@snap[north-west text-08]
+@snap[north-west]
 In un problema produttore/consumatore completo, molti risultati sono prodotti da uno o più produttori e sono consumati da uno o più consumatori. 
 
 Invece di avere un unico sharedResult, abbiamo una lista di oggetti che sono stati prodotti e non ancora consumati.
