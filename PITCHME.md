@@ -76,7 +76,30 @@ Quando il risultato è pronto, il produttore setta il valore della variabile a u
 Il consumatore può controllare se il risultato è pronto controllando se il valore della variabile **sharedResult** è nullo. 
 Utilizziamo la variabile **lock** per sincronizzare.
 @snapend
-
+@snap[south-west]
+Codice produttore:
+```java
+makeResult = generateTheResult(); // Not synchronized!
+synchronized(lock) {
+    sharedResult = makeResult;
+    lock.notify();
+}
+```
+Codice consumatore:
+```
+synchronized(lock) {
+    while ( sharedResult == null ) {
+        try {
+            lock.wait();
+        }
+        catch (InterruptedException e) {
+            }
+    }
+    useResult = sharedResult;
+}
+useTheResult(useResult); // Not synchronized!
+```
+@snapend
 ---
 
 @snap[north-west]
