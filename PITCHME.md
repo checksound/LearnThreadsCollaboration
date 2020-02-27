@@ -165,6 +165,19 @@ Una soluzione è chiamare la **notifyAll()** invece della notify(), che notifich
 @[27-42](metodo put, per aggiungere elemento alla coda)
 ---
 
+Java ha due classi che implementano la blocking queue: LinkedBlockingQueue e ArrayBlockingQueue. Questi sono tipi parametrici per permettere di specificare i tipi di elementi che la coda può contenere. Entrambe le classi sono definite nel pacchetto java.util.concurrent ed entrambe implementano l'interfaccia BlockingQueue. 
+
+```java
+ArrayBlockingQueue<ItemType> bqueue = new ArrayBlockingQueue<>(25);
+```
+
+```java
+LinkedBlockingQueue<ItemType> bqueue = new LinkedBlockingQueue<>();
+```
+---
+
+
+---
 @snap[north-west]
 ### Array di tipo primitivo - esempio
 @snapend
