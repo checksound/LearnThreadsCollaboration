@@ -141,39 +141,10 @@ un produttore non inserisce un elemento e notifica l'inserimento: per questo mot
 
 ---
 
-@snap[north-west]
-```java
-import java.util.LinkedList;
-
-public class MyLinkedBlockingQueue<E> {
-	private LinkedList<E> taskList = new LinkedList<E>();
-
-	public void clear() {
-		synchronized (taskList) {
-			taskList.clear();
-		}
-	}
-
-	public void add(E task) {
-		synchronized (taskList) {
-			taskList.addLast(task);
-			taskList.notify();
-		}
-	}
-
-	public E take() throws InterruptedException {
-		synchronized (taskList) {
-			while (taskList.isEmpty())
-				taskList.wait();
-			return taskList.removeFirst();
-		}
-	}
-}
-
-```
-@snapend
+---?gist=MassimoCappellano/34a86252db41dc4d28d4b21424246ea7&lang=Java&title=Dynamic Array of ints
 
 ---
+
 @snap[north-west]
 ### Array di tipo primitivo - esempio
 @snapend
