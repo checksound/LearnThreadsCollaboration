@@ -140,6 +140,7 @@ un produttore non inserisce un elemento e notifica l'inserimento: per questo mot
 @snapend
 
 ---?gist=MassimoCappellano/34a86252db41dc4d28d4b21424246ea7&lang=Java&title=Implementazione di una blocking queue
+@[4](variabile interna di tipo LinkedList)
 @[19-25](metodo take, per prendere elemento dalla coda)
 @[12-17](metodo add, per aggiungere elemento alla coda)
 @[6-10](metodo clean, per svuotare la coda)
