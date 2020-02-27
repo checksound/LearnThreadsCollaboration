@@ -125,17 +125,14 @@ In un problema produttore/consumatore completo, molti risultati sono prodotti da
 
 Invece di avere un unico oggetto condiviso, *sharedResult*, abbiamo una lista di oggetti che sono stati prodotti e non ancora consumati.<br><br>
 
-La struttura dati che implementa questa problematica di produttore e consumatore è quella di una lista in cui i produttori mettono gli elementi prodotti e i consumatori prendono gli elementi da consumare.
+La struttura dati che implementa questa problematica di produttore e consumatore è quella di una **lista** in cui i produttori mettono gli elementi prodotti e i consumatori prendono gli elementi da consumare.
 
 @snapend
 ---
-@snap[north-west]
-### Blocking queue
 
 @snap[north-west text-08]
+### Blocking queue
 Questa lista deve essere sincronizzata per evitare race condition ma in più deve far si che se la lista è vuota e un consumatore cerca di prelevare un elemento dalla lista, il consumatore sia messo in wait (bloccato) fino a che un produttore non inserisce un elemento e notifica: per questo questa struttura si chiama blocking queue.
-@snapend
-
 @snapend
 
 ---
