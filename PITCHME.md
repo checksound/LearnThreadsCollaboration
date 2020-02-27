@@ -46,12 +46,12 @@ obj.notify(); // send out a notification that the result is available
 @snap[south-west text-07]
 I due thread potrebbero eseguire il loro codice nel seguente ordine:
 @ol
-1. Il Thread A controlla **resultIsAvailable()** è trova che il risultato non è disponibile, così decide di invocare obj.wait(), ma prima che lo faccia,
-1. Il Thread B termina di generare il risultato e invoca obj.notify()
-1. Il Thread A chiama obj.wait() per aspettare la notifica che il risultato è disponibile.
+1. Il Thread A controlla **resultIsAvailable()** è trova che il risultato non è disponibile, così decide di invocare **obj.wait()**, ma prima che lo faccia,
+1. Il Thread B termina di generare il risultato e invoca **obj.notify()**
+1. Il Thread A chiama **obj.wait()** per aspettare la notifica che il risultato è disponibile.
 @olend
 
-Nello Step 3, il Thread A sta aspettando per una notifica che non arriverà mai, perché notify() è già stata invocata nello Step 2. Questo è un tipo di deadlock che lascia il Thread A aspettare per sempre.
+Nello Step 3, il Thread A sta aspettando per una notifica che non arriverà mai, perché **notify()** è già stata invocata nello Step 2. Questo è un tipo di deadlock che lascia il Thread A aspettare per sempre.
 
 @snapend
 
