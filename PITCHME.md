@@ -43,7 +43,7 @@ obj.notify(); // send out a notification that the result is available
 ```
 @snapend
 
-@snap[west text-07]
+@snap[south-west text-07]
 I due thread potrebbero eseguire il loro codice nel seguente ordine:
 @ol
 - Il Thread A controlla resultIsAvailable() è trova che il risultato non è disponibile, così decide di invocare obj.wait(), ma prima che lo faccia,
