@@ -160,7 +160,9 @@ Una soluzione è chiamare la **notifyAll()** invece della notify(), che notifich
 @snapend
 
 ---?gist=MassimoCappellano/0092be9c4c2f53658c1cdcb1c751e9a5&lang=Java&title=Blocking queue con limite massimo
-
+@[2-19](variabili interne condivise)
+@[11-25](metodo take)
+@[27-42](metodo put)
 ---
 
 @snap[north-west]
