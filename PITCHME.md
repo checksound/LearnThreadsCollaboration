@@ -51,7 +51,7 @@ I due thread potrebbero eseguire il loro codice nel seguente ordine:
 1. Il *Thread A* chiama **obj.wait()** per aspettare la notifica che il risultato è disponibile. @note[note 3]
 @olend
 
-Nello Step 3, il Thread A sta aspettando per una notifica che non arriverà mai, perché **notify()** è già stata invocata nello Step 2. Questo è un tipo di deadlock che lascia il Thread A aspettare per sempre.
+Nello Step 3, il Thread A sta aspettando per una notifica che non arriverà mai, perché **notify()** è già stata invocata nello Step 2. Questo è un tipo di deadlock che lascia il *Thread A* aspettare per sempre.
 
 @snapend
 
