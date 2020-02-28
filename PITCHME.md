@@ -295,7 +295,18 @@ public void method()
 }
 ```
 ---
+@snap[north-west text-08]
+Inoltre l'oggetto lock implicito ha associata una singola condition. Il metodo **wait()** aggiunge il thread alla coda dei thread in wait, 
+e i metodi -**notify()**/**notifyAll()** sboccano i thread in waiting.<br><br>
+In altre parole chiamare **wait()** e **notifyAll()** è equivalente a:
 
+```java
+intrinsicCondition.await();
+intrinsicCondition.signalAll();
+```
+@snapend
+
+---
 @snap[north-west]
 #### Riepilogo
 @snapend
