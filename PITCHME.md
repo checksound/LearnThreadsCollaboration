@@ -220,7 +220,7 @@ Un' altra classe che rappresenta una coda è **ConcurrentLinkedQueue<E>** nel pa
 ConcurrentLinkedQueue<E> queue = new ConcurrentLinkedQueue<>();
 ```
 Questa classe non è di tipo blocking queue: il metodo per aggiungere un elemento x alla coda è **queue.add(x)**. 
-Il metodo per rimuovere un elemento dalla testa della coda è **queue.poll()**. 
+Il metodo per rimuovere un elemento dalla testa della coda è **queue.poll()**.<br> 
 La chiamata **queue.poll()** ritorna *null* se la coda è vuota; quindi **poll()** può essere utilizzato per testare se la coda è vuota 
 o ritrovare l'elemento altrimenti.
 
