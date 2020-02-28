@@ -227,6 +227,20 @@ o ritrovare l'elemento altrimenti.
 @snapend
 
 ---
+
+@snap[north-west text-08]
+### Gli ExecutorService
+Siccome i **thread pool** sono comuni nella programmazione concorrente, non è sorprendente che Java 
+abbia tool di alto livello per creare e gestire thread pool. 
+L'interfaccia **ExecutorService**, nel package **java.util.concurrent**, definisce servizi che possono eseguire i task quando sono sottomessi ad esso. 
+
+```java
+int processors = Runtime.getRuntime().availableProcessors();
+executor = Executors.newFixedThreadPool(processors);
+```
+@snapend
+
+---
 @snap[north-west]
 #### Riepilogo
 @snapend
