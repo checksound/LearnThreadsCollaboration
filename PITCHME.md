@@ -188,9 +188,9 @@ LinkedBlockingQueue<ItemType> bqueue = new LinkedBlockingQueue<>();
 @snapend
 
 ---
-@snap[north-west]
+@snap[north-west text-07]
 Se *bqueue* è una coda bloccante che appartiene a una delle due classi, allora le seguenti operazioni sono definite:
-@ul
+@ul[](false)
 - *bqueue.take()* - Rimuove un elemento dalla coda e lo ritorna risultato. Se la coda è vuota quando questo metodo è invocato, il thread che ha invocato il metodo rimane bloccato finché un elemento non sarà disponibile. Questo metodo lancia una InterruptedException se un thread è interrotto mentre è bloccato.
 - *bqueue.put(item)* - Aggiunge un elemento alla coda. Se la coda ha una capacità limitata ed è piena. Questo metodo lancia una InterruptedException se il thread è interrotto mentre era bloccato.
 - *bqueue.add(item)* - Aggiunge un elemento alla coda, se lo spazio è disponibile. Se la coda ha una capacità limitata e è piena, è lanciata una IllegalStateException. Questo metodo non è bloccante.
