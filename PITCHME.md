@@ -272,6 +272,8 @@ Quando altri thread chiamano il metodo **lock()** sullo stesso oggetto, sono sos
 
 ### Lock implicito vs Lock esplicito
 
+---
+
 @snap[north-west]
 #### Riepilogo
 @snapend
