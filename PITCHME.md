@@ -174,12 +174,13 @@ Entrambe le classi sono definite nel pacchetto **java.util.concurrent** ed entra
 ---
  
 @snap[north-west]
-Un **ArrayBlockingQueue** ha una capacità massima che è specificata quando è creata.<br><br> 
+Un **ArrayBlockingQueue** ha una capacità massima che è specificata quando è creata.<br> 
 Per esempio, per creare una coda bloccante che può contenere fino a 25 elementi di tipo *ItemType*, si può dire:
 ```java
 ArrayBlockingQueue<ItemType> bqueue = new ArrayBlockingQueue<>(25);
 ```
-Una **LinkedBlockingQueue** crea, invece, una blocking queue con capacità illimitata.<br><br> 
+<br>
+Una **LinkedBlockingQueue** crea, invece, una blocking queue con capacità illimitata.<br> 
 Per esempio:
 ```java
 LinkedBlockingQueue<ItemType> bqueue = new LinkedBlockingQueue<>();
