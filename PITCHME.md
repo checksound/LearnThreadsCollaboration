@@ -244,7 +244,7 @@ Il metodo **ritorna immediatamente** dopo aver messo l'oggetto task nella coda d
 @snapend
 
 ---
-@snap[north-west text-08]
+@snap[north-west text-07]
 ### Oggetti di tipo Lock 
 Il metodo per proteggere un blocco di codice è con un **java.util.concurrent.locks.Lock** e l'implementazione **java.util.concurrent.locks.ReentrandLock**:
 ```java
