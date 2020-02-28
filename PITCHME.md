@@ -231,7 +231,7 @@ o ritrovare l'elemento altrimenti.
 @snap[north-west text-08]
 ### Gli ExecutorService
 Siccome i **thread pool** sono comuni nella programmazione concorrente, non è sorprendente che Java 
-abbia tool di alto livello per creare e gestire thread pool. 
+abbia tool di alto livello per creare e gestire thread pool.<br> 
 L'interfaccia **ExecutorService**, nel package **java.util.concurrent**, definisce servizi che possono eseguire i task quando sono sottomessi ad esso. 
 
 ```java
@@ -239,8 +239,7 @@ int processors = Runtime.getRuntime().availableProcessors();
 executor = Executors.newFixedThreadPool(processors);
 ```
 Il metodo **executor.execute(task)** può essere utilizzato per sottomettere un oggetto, task, di tipo **Runnable**, per l'esecuzione. 
-Il metodo **ritorna immediatamente** dopo aver messo l'oggetto task nella coda dei waiting task.<br><br>
-I thread del thread pool si occupano di togliere i task dalla coda e di eseguirli.
+Il metodo **ritorna immediatamente** dopo aver messo l'oggetto task nella coda dei waiting task.
 
 @snapend
 
