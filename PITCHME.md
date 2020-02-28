@@ -258,7 +258,9 @@ finally
    myLock.unlock(); // make sure the lock is unlocked even if an exception is thrown
 }
 ```
-questo costrutto garantisce che solo un thread alla volta può entrare in una sezione critica. Quando un thread invoca il metodo lock() di un object di tipo Lock, nessun altro thread può passare oltre questo statement. Quando altri thread chiamano lock, sono sospesi finché il primo thread non invoca il metodo unlock() del lock object.
+questo costrutto garantisce che solo un thread alla volta può entrare in una sezione critica. 
+Quando un thread invoca il metodo **lock()** di un object di tipo **Lock**, nessun altro thread può passare oltre questo statement. 
+Quando altri thread chiamano il metodo **lock()** sullo stesso oggetto, sono sospesi finché il primo thread non invoca il metodo **unlock()** del lock object.
 @snapend
 ---
 
