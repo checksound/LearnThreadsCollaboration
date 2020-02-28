@@ -170,10 +170,11 @@ Java ha due classi che implementano la blocking queue:
 Questi sono tipi parametrici per permettere di specificare i tipi di elementi che la coda può contenere.<br><br> 
 Entrambe le classi sono definite nel pacchetto **java.util.concurrent** ed entrambe implementano l'interfaccia **BlockingQueue**. 
 <br>
+Un ArrayBlockingQueue ha una capacità massima che è specificata quando è creata. Per esempio, per creare una coda bloccante che può contenere fino a 25 elementi di tipo ItemType, si può dire:
 ```java
 ArrayBlockingQueue<ItemType> bqueue = new ArrayBlockingQueue<>(25);
 ```
-
+Una LinkedBlockingQueue crea una blocking queue con capacità illimitata. Per esempio:
 ```java
 LinkedBlockingQueue<ItemType> bqueue = new LinkedBlockingQueue<>();
 ```
