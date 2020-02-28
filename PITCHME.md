@@ -264,6 +264,14 @@ Quando altri thread chiamano il metodo **lock()** sullo stesso oggetto, sono sos
 @snapend
 ---
 
+@snap[north-west text-07]
+### Oggetti di tipo Condition
+@snapend
+
+---
+
+### Lock implicito vs Lock esplicito
+
 @snap[north-west]
 #### Riepilogo
 @snapend
