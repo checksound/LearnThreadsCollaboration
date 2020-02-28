@@ -166,10 +166,14 @@ Una soluzione è chiamare la **notifyAll()** invece della notify(), che notifich
 ---
 @snap[north-west]
 Java ha due classi che implementano la blocking queue: 
-**LinkedBlockingQueue** e **ArrayBlockingQueue**.<br> 
+**LinkedBlockingQueue** e **ArrayBlockingQueue**.<br><br> 
 Questi sono tipi parametrici per permettere di specificare i tipi di elementi che la coda può contenere.<br><br> 
-Entrambe le classi sono definite nel pacchetto **java.util.concurrent** ed entrambe implementano l'interfaccia **BlockingQueue**. 
-<br>
+Entrambe le classi sono definite nel pacchetto **java.util.concurrent** ed entrambe implementano l'interfaccia **BlockingQueue**.
+@snapend
+
+---
+ 
+@snap[north-west]
 Un ArrayBlockingQueue ha una capacità massima che è specificata quando è creata. Per esempio, per creare una coda bloccante che può contenere fino a 25 elementi di tipo ItemType, si può dire:
 ```java
 ArrayBlockingQueue<ItemType> bqueue = new ArrayBlockingQueue<>(25);
