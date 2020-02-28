@@ -198,7 +198,7 @@ Se *bqueue* è una coda bloccante che appartiene a una delle due classi, allora 
 
 ---
 
-@snap[north-west text-08]
+@snap[north-west text-09]
 @ul[](false)
 - *bqueue.add(item)* - Aggiunge un elemento alla coda, se lo spazio è disponibile. Se la coda ha una capacità limitata e è piena, lancia una *IllegalStateException*. Questo metodo non è bloccante.
 - *bqueue.clear()* - Rimuove tutti gli elementi dalla coda e li scarta.
