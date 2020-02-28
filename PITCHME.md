@@ -269,9 +269,31 @@ Quando altri thread chiamano il metodo **lock()** sullo stesso oggetto, sono sos
 @snapend
 
 ---
-
+@snap[north-west text-08]
 ### Lock implicito vs Lock esplicito
 
+Il seguente codice:
+
+```java
+public synchronized void method()
+{
+    // method body
+}
+```
+è equivalente a:
+```java
+public void method()
+{
+    this.intrinsicLock.lock();
+    try
+    {
+    // method body
+    }
+    finally { 
+        this.intrinsicLock.unlock(); 
+        }
+}
+```
 ---
 
 @snap[north-west]
