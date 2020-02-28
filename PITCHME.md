@@ -236,7 +236,7 @@ L'interfaccia **ExecutorService**, nel package **java.util.concurrent**, definis
 
 ```java
 int processors = Runtime.getRuntime().availableProcessors();
-executor = Executors.newFixedThreadPool(processors);
+ExecutorService executor = Executors.newFixedThreadPool(processors);
 ```
 Il metodo **executor.execute(task)** può essere utilizzato per sottomettere un oggetto, task, di tipo **Runnable**, per l'esecuzione. 
 Il metodo **ritorna immediatamente** dopo aver messo l'oggetto task nella coda dei waiting task.
