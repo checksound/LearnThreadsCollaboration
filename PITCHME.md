@@ -159,7 +159,7 @@ Quando un elemento è aggiunto a una coda, noi vogliamo che il thread consumator
 Una soluzione è chiamare la **notifyAll()** invece della notify(), che notificherà a tutti i thread, inclusi i consumatori che aspettano in waiting.
 @snapend
 
----?gist=MassimoCappellano/0092be9c4c2f53658c1cdcb1c751e9a5&lang=Java&title=Blocking queue con limite massimo
+---?gist=MassimoCappellano/0092be9c4c2f53658c1cdcb1c751e9a5&lang=Java&title=Esempio utilizzo notifyAll()
 @[2-19](variabili interne condivise: message e empty)
 @[11-25](metodo take, per prendere elemento dalla coda)
 @[27-42](metodo put, per aggiungere elemento alla coda)
