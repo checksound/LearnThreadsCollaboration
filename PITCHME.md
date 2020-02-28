@@ -164,6 +164,9 @@ Una soluzione è chiamare la **notifyAll()** invece della notify(), che notifich
 @[11-25](metodo take, per prendere elemento dalla coda)
 @[27-42](metodo put, per aggiungere elemento alla coda)
 ---?gist=MassimoCappellano/9a14eafac275a29c107e46b67dcc2599&lang=Java&title=Blocking queue con limite massimo di elementi 
+@[6-7](variabili interne condivise: queue e limit)
+@[13-21](metodo enqueue)
+@[23-32](metodo dequeue)
 
 ---
 @snap[north-west]
