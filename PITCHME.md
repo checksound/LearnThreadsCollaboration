@@ -212,8 +212,8 @@ Se *bqueue* è una coda bloccante che appartiene a una delle due classi, allora 
 
 ---
 
-@snap[north-west text-07]
-##Concurrent Queue
+@snap[north-west text-08]
+### Concurrent Queue
 Un' altra classe che rappresenta una coda è **ConcurrentLinkedQueue<E>** nel package **java.util.concurrent**.<br>
 
 ```java
