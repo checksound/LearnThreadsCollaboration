@@ -115,6 +115,7 @@ non dovrebbe essere impossibile per entrambi i metodi essere eseguiti contempora
 Infatti, **lock.wait()** è un caso speciale: quando un thread chiama **lock.wait()**, esso cede il lock che teneva sull'oggetto sincronizzato.<br><br> 
 Questo dà a un altro thread la possibilità di eseguire il blocco **synchronized(lock)** che contiene lo statement **lock.notify()**.  
 Dopo che il secondo thread (il produttore) esce dal blocco sincronizzato (avendo prima invocato la notify), rilascia quindi il lock che può essere a questo punto acquisito dal thread consumer che è stato risvegliato.
+![](assets/img/monitor_java.gif)
 @snapend
 
 ---
