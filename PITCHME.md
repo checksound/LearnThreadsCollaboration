@@ -116,7 +116,7 @@ Infatti, **lock.wait()** è un caso speciale: quando un thread chiama **lock.wai
 Questo dà a un altro thread la possibilità di eseguire il blocco **synchronized(lock)** che contiene lo statement **lock.notify()**. Dopo che il secondo 
 thread (il produttore) esce dal blocco sincronizzato (avendo prima invocato la notify), rilascia quindi il lock che può essere a questo 
 punto acquisito dal thread consumer che è stato risvegliato.<br>
-![width=400](assets/img/monitor_java.gif)
+![](assets/img/monitor_java.gif)
 @snapend
 
 ---
