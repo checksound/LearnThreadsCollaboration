@@ -108,7 +108,7 @@ useTheResult(useResult); // Not synchronized!
 
 ---
 
-@snap[north-west text-06]
+@snap[north-west text-05]
 Da notare una cosa: **lock.wait()** non finisce finché **lock.notify()** non è invocato, 
 ma siccome entrambi i metodi sono chiamati all'interno di blocchi synchronized che si sincronizzano sullo stesso oggetto, 
 non dovrebbe essere impossibile per entrambi i metodi essere eseguiti contemporaneamente?<br><br> 
