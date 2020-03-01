@@ -32,14 +32,14 @@ Ora c'è qualche subdola race condition in questo codice.
 
 @snap[north-west]
 ```java
-// Thread B: consumatore
+// Thread A: consumatore
 if ( resultIsAvailable() == false )
     obj.wait(); // wait for notification that the result is available
 useTheResult();
 ```
 
 ```
-// Thread A: produttore
+// Thread B: produttore
 generateTheResult();
 obj.notify(); // send out a notification that the result is available
 ```
