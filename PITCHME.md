@@ -10,17 +10,17 @@ abbia prodotto, prima di poter prelevare l'elemento.
 @snapend
 ---
 @snap[west]
-Il *Thread B*, consumatore e *Thread A*, produttore, eseguono questo codice, dove *obj* è qualche oggetto:
+Il *Thread A*, consumatore e *Thread B*, produttore, eseguono questo codice, dove *obj* è qualche oggetto:
 
 ```java
-// Thread B
+// Thread A: consumatore
 if ( resultIsAvailable() == false )
     obj.wait(); // wait for notification that the result is available
 useTheResult();
 ```
 
 ```
-// Thread A
+// Thread B: produttore
 generateTheResult();
 obj.notify(); // send out a notification that the result is available
 ```
