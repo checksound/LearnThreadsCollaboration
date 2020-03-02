@@ -263,7 +263,7 @@ Quando altri thread chiamano il metodo **lock()** sullo stesso oggetto, sono sos
 ### Oggetti di tipo Condition
 
 L'interfaccia `Condition` nel package `java.util.concurrent.locks` ha metodi per la comunicazione tra i thread simili 
-ai metodi del monitor di `Object`: `wait()`, `notify()` e `notifyAll()`. `Condition` ha i metodi `await()`, `signal()` e `signalAll()`. 
+ai metodi del monitor di `Object`: `wait()`, `notify()` e `notifyAll()`. `Condition` ha i metodi `await()`, `signal()` e `signalAll()`.<br> 
 Dove Lock rimpiazza l'utilizzo dei metodi e statement sincronizzati, Condition rimpiazza l'utilizzo dei metodi del monitor di Object.
 <br>
 <table>
