@@ -239,6 +239,11 @@ Il metodo **ritorna immediatamente** dopo aver messo l'oggetto task nella coda d
 @snapend
 
 ---
+@snap[north-west]
+I thread del thread pool si occupano di togliere i task dalla coda e di eseguirli.
+![width=700](assets/img/ExecutorService.PNG)
+@snapend
+---
 @snap[north-west text-07]
 ### Oggetti di tipo Lock 
 Il metodo per proteggere un blocco di codice è con un **java.util.concurrent.locks.Lock** e l'implementazione **java.util.concurrent.locks.ReentrandLock**:
