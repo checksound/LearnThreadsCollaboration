@@ -240,7 +240,7 @@ Il metodo **ritorna immediatamente** dopo aver messo l'oggetto task nella coda d
 
 ---
 @snap[north-west]
-I thread del thread pool si occupano di togliere i task dalla coda e di eseguirli.
+Internamente, i thread del thread pool si occupano di togliere i task dalla coda e di eseguirli.
 ![width=700](assets/img/ExecutorService.png)
 @snapend
 ---
