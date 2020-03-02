@@ -261,6 +261,17 @@ Quando altri thread chiamano il metodo **lock()** sullo stesso oggetto, sono sos
 
 @snap[north-west text-07]
 ### Oggetti di tipo Condition
+
+L'interfaccia `Condition` nel package `java.util.concurrent.locks` ha metodi per la comunicazione tra i thread simili 
+ai metodi del monitor di `Object`: `wait()`, `notify()` e `notifyAll()`. `Condition` ha i metodi `await()`, `signal()` e `signalAll()`. 
+Dove Lock 
+
+| `java.util.concurrents.locks.Condition` |
+|----------------------------------------|
+| `void await()` mette questo thread nell'insieme dei thread in wait su questa condizione |
+| `void signalAll()` sblocca tutti i thread che sono in wait su questa condizione |
+| `void signal()` sblocca un thread selezionato in modo random tra quelli in wait su questa condizione |
+
 @snapend
 
 ---
