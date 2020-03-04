@@ -161,10 +161,6 @@ Quando un elemento è aggiunto a una coda, noi vogliamo che il thread consumator
 Una soluzione è chiamare la **notifyAll()** invece della notify(), che notificherà a tutti i thread, inclusi i consumatori che aspettano in waiting.
 @snapend
 
----?gist=MassimoCappellano/0092be9c4c2f53658c1cdcb1c751e9a5&lang=Java&title=Esempio utilizzo notifyAll()
-@[2-19](variabili interne condivise: message e empty)
-@[11-25](metodo take, per prendere elemento dalla coda)
-@[27-42](metodo put, per aggiungere elemento alla coda)
 ---?gist=MassimoCappellano/9a14eafac275a29c107e46b67dcc2599&lang=Java&title=Blocking queue con limite massimo di elementi 
 @[6-7](variabili interne condivise: queue e limit)
 @[13-21](metodo enqueue)
@@ -326,6 +322,17 @@ intrinsicCondition.signalAll();
 #### Riepilogo
 @snapend
 	
+	<ol>
+		<li>Problematica collaborazione tra thread;</li>
+		<li>Produttore e Consumatore;</li>
+		<li>La struttura dati **blocking queue**;</li>
+		<li>Le primitive **wait()**, **notify()** e **notifyAll()** a cosa servono;</li>
+		<li>Implementazione di una **blocking queue** con primitive;</li>
+		<li>Classi **ArrayBlockingQueue**, **LinkedBlockingQueue** e **ConcurrentQueue** in **java.util.concurrent**</li>
+		<li>Gli **ExecutorService** a cosa servono;</li>
+		<li>Oggetti di tipo **Lock** e **Condition** in **java.util.concurrent.locks**;</li>
+		<li>Implementazione di una blocking queue utilizzando le classi **Lock** e **Condition**</li>
+	</ol>
 	
 @snap[south span-100 text-06]
 [Vai a @fa[external-link]](https://checksound.gitbook.io/corsojava/i-thread-e-concorrenza) Thread e concorrenza 
