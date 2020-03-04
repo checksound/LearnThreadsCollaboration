@@ -327,10 +327,10 @@ intrinsicCondition.signalAll();
 	<li>La struttura dati **blocking queue**;</li>
 	<li>Le primitive **wait()**, **notify()** e **notifyAll()** a cosa servono;</li>
 	<li>Implementazione di una **blocking queue** con primitive;</li>
-	<li>Classi **ArrayBlockingQueue**, **LinkedBlockingQueue** e **ConcurrentQueue** in **java.util.concurrent**</li>
+	<li>Classi **ArrayBlockingQueue**, **LinkedBlockingQueue** e **ConcurrentQueue** in **java.util.concurrent**;</li>
 	<li>Gli **ExecutorService** a cosa servono;</li>
 	<li>Oggetti di tipo **Lock** e **Condition** in **java.util.concurrent.locks**;</li>
-	<li>Implementazione di una blocking queue utilizzando le classi **Lock** e **Condition**</li>
+	<li>Implementazione di una blocking queue utilizzando le classi **Lock** e **Condition**;</li>
 </ol>
 
 @snapend
