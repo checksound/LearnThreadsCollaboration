@@ -325,8 +325,8 @@ Differenti tipi di lock2
 
 ---?gist=MassimoCappellano/d5485f6b114a7bcc361cf214c75e10b6&lang=java&title=Esempio Produttore/Consumatore
 @[6-8](La variabile *lock* e le **Condition** *notFull* e *notEmpty*)
-@[13-26](metodo put)
-@[28-42](metodo take)
+@[13-26](metodo *put*)
+@[28-42](metodo *take*)
 
 ---
 @snap[north-west span-100 text-08]
