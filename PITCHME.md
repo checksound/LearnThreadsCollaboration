@@ -315,6 +315,14 @@ intrinsicCondition.signalAll();
 ```
 @snapend
 
++++
+
+Differenti tipi di lock1
+
++++
+
+Differenti tipi di lock2
+
 ---?gist=MassimoCappellano/d5485f6b114a7bcc361cf214c75e10b6&lang=java&title=Esempio Produttore/Consumatore
 
 ---
