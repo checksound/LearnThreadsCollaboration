@@ -283,7 +283,7 @@ Dove Lock rimpiazza l'utilizzo dei metodi e statement sincronizzati, Condition r
 @snap[north-west text-08]
 ### Lock implicito vs Lock esplicito
 
-Il seguente codice:
+Il seguente codice, con `synchronized`:
 
 ```java
 public synchronized void method()
@@ -291,7 +291,7 @@ public synchronized void method()
     // method body
 }
 ```
-è equivalente a:
+è equivalente all'utilizzo di un oggetto di tipo Lock implicito:
 ```java
 public void method()
 {
@@ -325,9 +325,12 @@ intrinsicCondition.signalAll();
 @snap[north-west]
 #### Riepilogo
 @snapend
+@snap[middle]
+	[Esempi Thread](https://github.com/checksound/EsempiThread)
+@snapend
 
 @snap[south span-100 text-06]
-[Vai a @fa[external-link]](https://checksound.gitbook.io/corsojava/i-thread-e-concorrenza)
+[Vai a Thread e concorrenza @fa[external-link]](https://checksound.gitbook.io/corsojava/i-thread-e-concorrenza)
 @snapend
 
 
