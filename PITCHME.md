@@ -320,20 +320,21 @@ intrinsicCondition.signalAll();
 ---
 @snap[north-west]
 #### Riepilogo
+	
+<ol>
+	<li>Problematica collaborazione tra thread;</li>
+	<li>Produttore e Consumatore;</li>
+	<li>La struttura dati **blocking queue**;</li>
+	<li>Le primitive **wait()**, **notify()** e **notifyAll()** a cosa servono;</li>
+	<li>Implementazione di una **blocking queue** con primitive;</li>
+	<li>Classi **ArrayBlockingQueue**, **LinkedBlockingQueue** e **ConcurrentQueue** in **java.util.concurrent**</li>
+	<li>Gli **ExecutorService** a cosa servono;</li>
+	<li>Oggetti di tipo **Lock** e **Condition** in **java.util.concurrent.locks**;</li>
+	<li>Implementazione di una blocking queue utilizzando le classi **Lock** e **Condition**</li>
+</ol>
+
 @snapend
-	
-	<ol>
-		<li>Problematica collaborazione tra thread;</li>
-		<li>Produttore e Consumatore;</li>
-		<li>La struttura dati **blocking queue**;</li>
-		<li>Le primitive **wait()**, **notify()** e **notifyAll()** a cosa servono;</li>
-		<li>Implementazione di una **blocking queue** con primitive;</li>
-		<li>Classi **ArrayBlockingQueue**, **LinkedBlockingQueue** e **ConcurrentQueue** in **java.util.concurrent**</li>
-		<li>Gli **ExecutorService** a cosa servono;</li>
-		<li>Oggetti di tipo **Lock** e **Condition** in **java.util.concurrent.locks**;</li>
-		<li>Implementazione di una blocking queue utilizzando le classi **Lock** e **Condition**</li>
-	</ol>
-	
+
 @snap[south span-100 text-06]
 [Vai a @fa[external-link]](https://checksound.gitbook.io/corsojava/i-thread-e-concorrenza) Thread e concorrenza 
 @snapend
