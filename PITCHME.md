@@ -325,12 +325,10 @@ intrinsicCondition.signalAll();
 @snap[north-west]
 #### Riepilogo
 @snapend
-@snap[middle]
-	[Esempi Thread](https://github.com/checksound/EsempiThread)
-@snapend
-
+	
+	
 @snap[south span-100 text-06]
-[Vai a Thread e concorrenza @fa[external-link]](https://checksound.gitbook.io/corsojava/i-thread-e-concorrenza)
+[Vai a @fa[external-link]](https://checksound.gitbook.io/corsojava/i-thread-e-concorrenza) Thread e concorrenza 
 @snapend
 
 
