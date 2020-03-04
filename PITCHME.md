@@ -318,7 +318,7 @@ intrinsicCondition.signalAll();
 ---?gist=MassimoCappellano/d5485f6b114a7bcc361cf214c75e10b6&lang=java&title=Esempio Produttore/Consumatore
 
 ---
-@snap[north-west]
+@snap[north-west span-100 text-06]
 #### Riepilogo
 	
 <ol>
